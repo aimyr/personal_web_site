@@ -3,253 +3,261 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aimer Koshmambetov — Portfolio</title>
-  <meta name="description" content="Personal website and portfolio of Aimer Koshmambetov: robotics, AI, and social impact projects." />
+  <title>Aimer Koshmambetov — Portfolio & CV</title>
+  <meta name="description" content="Personal website and CV of Aimer Koshmambetov." />
   <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2300A3FF'/%3E%3Ctext x='50' y='60' font-size='46' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EA%3C/text%3E%3C/svg%3E" />
   <style>
     :root{
-      --bg: #0b0f14;
-      --bg-soft:#0f141b;
-      --text:#e6edf3;
-      --muted:#9fb3c8;
-      --accent:#4f8cff;
-      --accent-2:#5eead4;
-      --card:#0f1622;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
+      --bg:#0b0f14; --text:#e6edf3; --muted:#9fb3c8;
+      --accent:#4f8cff; --card:#0f1622; --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35)
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;scroll-behavior:smooth}
-    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background: radial-gradient(1200px 800px at 10% -10%, #0f172a 0%, var(--bg) 40%), linear-gradient(180deg, #0b0f14, #0b0f14); color: var(--text)}
-    a{color:var(--accent); text-decoration:none}
-    a:hover{opacity:.9}
-    .container{max-width:1100px; margin:0 auto; padding:0 20px}
-    header{position:sticky; top:0; backdrop-filter:saturate(140%) blur(10px); background:rgba(11,15,20,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
-    nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
-    .brand-logo{width:34px; height:34px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7c3aed)}
-    .brand span{letter-spacing:.4px}
-    .nav-links a{margin-left:18px; padding:8px 12px; border-radius:12px; color:var(--text)}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+         background: radial-gradient(1200px 800px at 10% -10%, #0f172a 0%, var(--bg) 40%); color:var(--text)}
+    a{color:var(--accent); text-decoration:none} a:hover{opacity:.9}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(11,15,20,.6);backdrop-filter:saturate(140%) blur(10px);
+           border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand-logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+                background:linear-gradient(135deg,var(--accent),#7c3aed)}
+    .nav-links a{margin-left:18px;padding:8px 12px;border-radius:12px;color:var(--text)}
     .nav-links a:hover{background:rgba(255,255,255,.06)}
-
     .hero{padding:90px 0 40px}
-    .hero-inner{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center}
-    .hero h1{font-size:clamp(28px, 5vw, 56px); line-height:1.05; margin:0 0 10px}
-    .hero p{color:var(--muted); font-size:clamp(16px, 2.4vw, 19px)}
-    .badge{display:inline-flex; align-items:center; gap:8px; background:rgba(79,140,255,.15); color:#cfe2ff; padding:6px 12px; border:1px solid rgba(79,140,255,.35); border-radius:999px; font-size:14px}
-    .cta{display:flex; gap:12px; margin-top:20px}
-    .btn{padding:12px 16px; border-radius:14px; font-weight:600; border:1px solid transparent; transition:.2s transform}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(28px,5vw,56px);line-height:1.05;margin:0 0 10px}
+    .hero p{color:var(--muted);font-size:clamp(16px,2.4vw,19px)}
+    .badge{display:inline-flex;gap:8px;background:rgba(79,140,255,.15);color:#cfe2ff;padding:6px 12px;
+           border:1px solid rgba(79,140,255,.35);border-radius:999px;font-size:14px}
+    .cta{display:flex;gap:12px;margin-top:20px}
+    .btn{padding:12px 16px;border-radius:14px;font-weight:600;border:1px solid transparent;transition:.2s}
     .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(135deg,var(--accent),#7c3aed); color:white}
-    .btn-ghost{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.08); color:var(--text)}
-    .hero-card{background: radial-gradient(600px 300px at 100% 0%, rgba(94,234,212,.25), transparent 40%), var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
-    .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px}
-    .stat{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:14px}
-    .stat b{font-size:20px}
-
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#7c3aed);color:white}
+    .btn-ghost{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.08);color:var(--text)}
     section{padding:56px 0}
-    h2{font-size:clamp(22px, 3.2vw, 32px); margin:0 0 14px}
-    .sub{color:var(--muted); margin:0 0 24px}
-
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-    .card{background: var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:18px; transition:.2s transform, .2s box-shadow}
-    .card:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
-    .chip{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); margin-right:6px}
-    .card h3{margin:8px 0 8px; font-size:20px}
-    .card p{color:var(--muted)}
-    .card .row{display:flex; align-items:center; justify-content:space-between; gap:6px; margin-top:12px}
-
-    .about{display:grid; grid-template-columns: .9fr 1.1fr; gap:24px}
-    .about .box{background:linear-gradient(180deg, rgba(94,234,212,.08), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:18px}
-    ul.clean{margin:0; padding-left:18px}
-
-    .contact{display:grid; grid-template-columns: 1fr 1fr; gap:20px}
-    .contact .panel{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:18px}
-    .field{display:flex; flex-direction:column; gap:6px; margin-bottom:12px}
-    input, textarea{background:#0b1220; border:1px solid rgba(255,255,255,.08); color:var(--text); border-radius:12px; padding:12px}
-    .socials{display:flex; gap:10px; flex-wrap:wrap}
-
-    footer{border-top:1px solid rgba(255,255,255,.08); padding:26px 0; color:var(--muted)}
-
-    @media(max-width: 900px){
-      .hero-inner, .about, .contact{grid-template-columns: 1fr}
-      .grid{grid-template-columns: 1fr 1fr}
-    }
-    @media(max-width: 640px){
-      .grid{grid-template-columns: 1fr}
-      .nav-links{display:none}
-      .stats{grid-template-columns:1fr}
-    }
+    h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 14px}
+    h3{margin:10px 0}
+    .sub{color:var(--muted);margin:0 0 24px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;transition:.2s}
+    .card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .chip{display:inline-block;font-size:12px;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-right:6px}
+    .resume{display:grid;grid-template-columns:300px 1fr;gap:24px}
+    .sidebar{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
+    .photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:#0b1220}
+    .block{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;margin-bottom:18px}
+    .row{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    ul.clean{margin:0;padding-left:18px}
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:26px 0;color:var(--muted)}
+    @media(max-width:1000px){.hero-inner{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.resume{grid-template-columns:1fr}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}.nav-links{display:none}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#top" class="brand">
-          <span class="brand-logo" aria-hidden="true">⚡</span>
-          <span>Aimer K.</span>
-        </a>
-        <div class="nav-links">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container">
+    <nav>
+      <a href="#top" class="brand"><span class="brand-logo">⚡</span><span>Aimer Koshmambetov</span></a>
+      <div class="nav-links">
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-  <main id="top" class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <span class="badge">Robotics • AI • Social Impact</span>
-          <h1>Building useful tech for the real world.</h1>
-          <p>I’m <b>Aimer Koshmambetov</b>, a student engineer from Kazakhstan working on assistive tech (EEG/EMG), robotics, and clean energy projects. I love fast prototypes that help people today.</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#projects">See projects</a>
-            <a class="btn btn-ghost" href="mailto:you@example.com">Email me</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px">
-            <strong>Now</strong>
-            <span class="chip">Open to collaborations</span>
-          </div>
-          <ul class="clean">
-            <li>🔬 Reviewing surface EMG signal quality methods.</li>
-            <li>🧠 Prototyping tongue-controlled assistive interface.</li>
-            <li>☀️ Iterating on low-cost solar-tracking station.</li>
-          </ul>
-          <div class="stats">
-            <div class="stat"><div>Projects</div><b>20+ </b></div>
-            <div class="stat"><div>Hackathon wins</div><b>10</b></div>
-            <div class="stat"><div>Volunteering</div><b>50h+</b></div>
-          </div>
+<main id="top" class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="badge">Robotics • AI • Social Impact</span>
+        <h1>Building useful tech for the real world.</h1>
+        <p>I’m <b>Aimer Koshmambetov</b> from Almaty, Kazakhstan—student engineer working across assistive tech (EEG/EMG), robotics, and clean energy.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#resume">View CV</a>
+          <a class="btn btn-ghost" href="mailto:aimerkoshmambetov@gmail.com">Email me</a>
         </div>
       </div>
-    </section>
-
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <p class="sub">A selection of things I’ve built recently. More on my GitHub.</p>
-      <div class="grid">
-        <article class="card">
-          <span class="chip">Assistive Tech</span>
-          <h3>ASAR — Tongue-controlled interface</h3>
-          <p>Wearable mouthpiece lets users control devices & wheelchairs with subtle tongue gestures. Raspberry Pi + IMU, ML-based decoding.</p>
-          <div class="row">
-            <a href="#" aria-label="View project">View →</a>
-            <span class="sub">2025</span>
-          </div>
-        </article>
-        <article class="card">
-          <span class="chip">Robotics</span>
-          <h3>Smart Trash Bin</h3>
-          <p>Public-space bin that sorts waste on-drop using CV + CNC arm; ultrasonic sensors report fill level for smarter pickup routes.</p>
-          <div class="row">
-            <a href="#">View →</a>
-            <span class="sub">2024</span>
-          </div>
-        </article>
-        <article class="card">
-          <span class="chip">Energy</span>
-          <h3>Future Solar Power Plant</h3>
-          <p>5.5 kWh station with cooling & tracking to maximize yield in hot climates. Field-tested in Taraz.</p>
-          <div class="row">
-            <a href="#">View →</a>
-            <span class="sub">2024</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <p class="sub">Quick background, skills, and tools I enjoy.</p>
-      <div class="about">
-        <div class="box">
-          <h3>Bio</h3>
-          <p>High-school student at NIS Taraz. Passionate about building accessible technology, leading community initiatives, and learning by doing. I enjoy fast iterations and clear, measurable impact.</p>
-          <p>Seeking research & maker collaborations in EMG/EEG, robotics, and HRI.</p>
-        </div>
-        <div class="box">
-          <h3>Skills & Tools</h3>
-          <ul class="clean">
-            <li>Python, C/C++, Arduino, ROS2, Unity</li>
-            <li>TensorFlow / PyTorch, OpenCV</li>
-            <li>Electronics: PCB, sensors (EMG/EEG), HX711, IMU</li>
-            <li>CAD: Fusion 360; 3D printing, CNC</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="sub">Say hi — I’m friendly 🙂</p>
-      <div class="contact">
-        <div class="panel">
-          <form id="contact-form" onsubmit="sendEmail(event)">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" placeholder="Your name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required />
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="What would you like to build together?" required></textarea>
-            </div>
-            <button class="btn btn-primary" type="submit">Send</button>
-            <p id="status" class="sub" style="margin-top:8px"></p>
-          </form>
-        </div>
-        <div class="panel">
-          <h3>Elsewhere</h3>
-          <div class="socials">
-            <a href="#" aria-label="GitHub">🐙 GitHub</a>
-            <a href="#" aria-label="LinkedIn">💼 LinkedIn</a>
-            <a href="#" aria-label="YouTube">▶️ YouTube</a>
-            <a href="mailto:you@example.com" aria-label="Email">✉️ Email</a>
-          </div>
-          <p class="sub" style="margin-top:12px">Replace links with yours. The form above uses a mailto fallback by default; see the inline comment in code to wire it to Formspree or EmailJS.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap">
-        <span>© <span id="year"></span> Aimer Koshmambetov</span>
-        <a href="#top" aria-label="Back to top">Back to top ↑</a>
+      <div class="card">
+        <h3 style="margin:6px 0 12px">Contact</h3>
+        <div class="row"><span>📍 Almaty, Kazakhstan</span><span>📧 <a href="mailto:aimerkoshmambetov@gmail.com">aimerkoshmambetov@gmail.com</a></span></div>
+        <div class="row"><span>📞 +7 708 414 4773</span><span>🌐 <a href="#">GitHub</a> · <a href="#">LinkedIn</a></span></div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- RESUME -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p class="sub">Everything from your message, structured and web-ready. Replace the placeholder photo file <code>portrait.jpg</code> with your own.</p>
 
-    // Simple contact form fallback using mailto (client-side only, works on GitHub Pages)
-    // For a production form without mail client, integrate a service like Formspree or EmailJS.
-    function sendEmail(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const to = 'you@example.com'; // TODO: put your email here
-      const subject = encodeURIComponent('Website message from ' + name);
-      const body = encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')');
-      const href = `mailto:${to}?subject=${subject}&body=${body}`;
-      document.getElementById('status').textContent = 'Opening your email app…';
-      window.location.href = href;
-      setTimeout(()=>{document.getElementById('status').textContent='';}, 2000);
-    }
-  </script>
+    <div class="resume">
+      <!-- Sidebar with photo & quick info -->
+      <aside class="sidebar">
+        <img class="photo" src="portrait.jpg" alt="Portrait of Aimer Koshmambetov (replace portrait.jpg)">
+        <div style="height:12px"></div>
+        <div class="block">
+          <h3>Details</h3>
+          <ul class="clean">
+            <li><b>Location:</b> Almaty, Kazakhstan</li>
+            <li><b>Phone:</b> +7 708 414 4773</li>
+            <li><b>Email:</b> <a href="mailto:aimerkoshmambetov@gmail.com">aimerkoshmambetov@gmail.com</a></li>
+            <li><b>Languages:</b> Kazakh (Native), Russian (Fluent), English (Advanced)</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Tools & Frameworks</h3>
+          <ul class="clean">
+            <li>Git, ROS2, ArduPilot, Mavproxy</li>
+            <li>TensorFlow, Keras, PyTorch</li>
+            <li>NumPy, Pandas, scikit-learn, Matplotlib</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main CV content -->
+      <div>
+        <div class="block">
+          <h3>Education</h3>
+          <p><b>Nazarbayev Intellectual School</b>, Almaty, Kazakhstan — <i>Expected Graduation: May 2026</i><br/>
+          Activities: Robotics Club (2015–2023), Rocket Modeling Team (2020–present), nFactorial Data Science Program (2023)</p>
+        </div>
+
+        <div class="block">
+          <h3>Technical Skills</h3>
+          <ul class="clean">
+            <li><b>Programming:</b> Python, C++, Java, C#, JavaScript, Unity</li>
+            <li><b>Hardware & Robotics:</b> Arduino, ESP32, STM32, Raspberry Pi, Fusion 360</li>
+            <li><b>DS/ML:</b> NumPy, Pandas, scikit-learn, Matplotlib, LightGBM, XGBoost, TensorFlow, Keras, PyTorch</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Project Experience</h3>
+          <p><b>Smart Trash Bin — Early-Stage Startup</b> | Lead Engineer | Almaty | Jan 2024 – Oct 2024<br/>
+          • Secured ≈ $7,500 USD in seed investment<br/>
+          • Led Fusion 360 CAD, mechanical assembly, electronics integration<br/>
+          • Built TensorFlow/Keras model for waste classification, +25% sorting accuracy</p>
+          <hr style="border-color:rgba(255,255,255,.08)">
+          <p><b>Future Solar Power Plant — Renewable Energy Startup</b> | Lead Engineer | Almaty | Jun 2024 – Aug 2024<br/>
+          • Won ~3M KZT (~$6,400 USD) innovation grant (government)<br/>
+          • Designed 5,500 Wh station with water cooling & solar tracking<br/>
+          • +18% power output via thermal management</p>
+          <hr style="border-color:rgba(255,255,255,.08)">
+          <p><b>Asar — Assistive EEG Interface</b> | CEO | Almaty | Jun 2024 – Present<br/>
+          • Kazakhstan’s first EEG-based interface for eye/facial control of devices<br/>
+          • Evolved from UMIT Touchpad (mouth-operated assistive device)<br/>
+          • Awards: Best Startup in Central Asia (Uzbekistan intl. comp.); 1st Red Bull Basement KZ (World Finalist); 3rd Samsung Solve for Tomorrow (~$2,000); 1st Astana Med Univ Demo Day (~$1,000); Diamond Challenge finalist; $5,000 USD investment (MED365 & Freedom Finance)</p>
+        </div>
+
+        <div class="block">
+          <h3>Awards & Competitions</h3>
+          <ul class="clean">
+            <li>1st — Astana Medical University Demo Day (500K KZT ~ $1,000)</li>
+            <li>1st — Uzbekistan National Open Rocket Modeling (S4A)</li>
+            <li>1st — Red Bull Basement Kazakhstan (World Finalist)</li>
+            <li>1st Best Scientific Project — FIRST Global Challenge Central Asia 2023</li>
+            <li>2nd — Samsung Innovation Campus Hackathon (Hardware) — 1.5M KZT (~$3,200)</li>
+            <li>2nd Best Scientific Project — FIRST Global Challenge Central Asia 2024</li>
+            <li>2nd — National “Daryn” Competition — Project “Balam”</li>
+            <li>3rd — National “Daryn” Competition — Project “Smart Trash Bin”</li>
+            <li>3rd — Samsung Solve For Tomorrow — 1M KZT (~$2,000)</li>
+            <li>Finalist — Diamond Challenge & FIRST Global Challenge Central Asia 2023</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Leadership & Volunteering</h3>
+          <p><b>Founding Chair, UMIT Volunteer Club</b> | Jun 2024 – Present<br/>
+          Led programming workshops for 60+ children with special needs (National Rehabilitation Child Center; Taraz “ASAR”).</p>
+          <p><b>Volunteer, Red Cross Kazakhstan</b><br/>
+          80+ hours: safety inspections of public swimming areas; food distribution to vulnerable groups.</p>
+        </div>
+
+        <div class="block">
+          <h3>Internships & Affiliations</h3>
+          <ul class="clean">
+            <li>Junior Software Engineer Intern, Alma+ (Year)</li>
+            <li>Software Engineering Intern, Avaya Kazakhstan (Year)</li>
+            <li>Junior Electrical Engineer Intern, Almaty Product (Year)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Other Programs</h3>
+          <ul class="clean">
+            <li>LaunchX (Online), Participant — 2025</li>
+            <li>Stanford Summer Session, USA — Participant, 2025</li>
+            <li>Lumiere Education</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Research Experience</h3>
+          <p><b>Detecting and Quantifying Bias in Neural Networks (LLMs/Fairness)</b><br/>
+          Stanford University — Advisors: Giuseppe Russo; Prof. Diyi Yang | 2025 – Present<br/>
+          Protocols for bias audits (datasets, probes/prompts, metrics: demographic parity, equalized odds). Tech: PyTorch, HF, OpenAI API. Status: manuscript/repo under moderation.</p>
+
+          <p><b>Long-Term Wearable sEMG: Ergonomics & Signal Quality — Systematic Review</b><br/>
+          Lumiere Research Scholar Program — Mentor: Claudia D’Ettorre | 2024 – Present<br/>
+          Review of sEMG quality during prolonged wear: ergonomics, adhesion, sweat/motion robustness, auto-recalibration, false-trigger suppression. PRISMA-style; sources: IEEE Xplore, PubMed, Google Scholar. Status: manuscript in revision; preprint in prep.</p>
+
+          <p><b>Assessing “Psychological Understanding” in AI Agents</b><br/>
+          With Prof. Matthew Courtney | 2025 – Present<br/>
+          ToM tasks and socio-cognitive benchmarks; measuring consistency & justification quality. Status: materials under review.</p>
+
+          <p class="sub">Links (GitHub/arXiv) will be added after moderation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT CARDS (optional showcase) -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <p class="sub">Quick highlights; details are in the CV above.</p>
+    <div class="grid">
+      <article class="card">
+        <span class="chip">Assistive Tech</span>
+        <h3>ASAR — EEG Interface</h3>
+        <p>Eye/facial movement control of devices; from UMIT Touchpad to EEG-based system.</p>
+      </article>
+      <article class="card">
+        <span class="chip">Robotics</span>
+        <h3>Smart Trash Bin</h3>
+        <p>On-drop sorting with CV; ultrasonic fill monitoring for smart routing.</p>
+      </article>
+      <article class="card">
+        <span class="chip">Energy</span>
+        <h3>Future Solar Power Plant</h3>
+        <p>5,500 Wh station with cooling and solar tracking; +18% power output.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="sub">Prefer email? One click below.</p>
+    <a class="btn btn-primary" href="mailto:aimerkoshmambetov@gmail.com">Email Aimer</a>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Aimer Koshmambetov</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
